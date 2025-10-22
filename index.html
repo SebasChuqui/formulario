@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Registro de Paciente</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background: #3b6aa88e;
+        margin: 16px;
+      }
+      form {
+        max-width: 720px;
+        margin: 5rem auto;
+        background: #a3ccf0;
+        padding: 12px;
+        border: 1px solid #064ab1;
+        border-radius: 8px;
+      }
+      h1 {
+        font-size: 2rem;
+        text-align: center;
+        color: #072757;
+      }
+      .g {
+        margin: 8px 0;
+      }
+      label {
+        display: block;
+        margin-bottom: 4px;
+        font-size: 1.2rem;
+        color: #051835;
+      }
+      input,
+      select {
+        width: 100%;
+        padding: 8px;
+        border: 1px solid #17174d;
+        border-radius: 10px;
+        font-size: 1rem;
+      }
+      input{
+        box-sizing: border-box;
+        width: 100%;
+        border-radius: 10px;
+      }
+      .acciones {
+        margin-top: 12px;
+        text-align: center;
+      }
+      button {
+        padding: 9px 12px;
+        border: 1px solid #0b6bcb;
+        background: #1177dd;
+        color: #fff;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 1.2rem;
+        font-weight: bold;
+      }
+      button + button {
+        margin-left: 6px;
+        background: #eef3f9;
+        color: #0b6bcb;
+      }
+      @media screen and (max-width: 768px) {
+      body {
+        font-family: Arial, sans-serif;
+        background: #9dffd88e;
+        margin: 16px;
+      }
+      form {
+        max-width: 720px;
+        margin: 5rem auto;
+        background: #3d86608e;
+        padding: 12px;
+        border: 1px solid #013c238e;
+        border-radius: 6px;
+      }
+      h1 {
+        font-size: 2rem;
+        text-align: center;
+        color: #063422;
+      }
+      .g {
+        margin: 8px 0;
+      }
+      label {
+        display: block;
+        margin-bottom: 4px;
+        font-size: 1.2rem;
+        color: #03311e;
+      }
+      input,
+      select {
+        width: 100%;
+        padding: 8px;
+        border: 1px solid #9dffd88e;
+        border-radius: 4px;
+        font-size: 1rem;
+      }
+      input{
+        box-sizing: border-box;
+        width: 100%;
+        border-radius: 10px;
+      }
+      .acciones {
+        margin-top: 12px;
+        text-align: center;
+      }
+      button {
+        padding: 9px 12px;
+        background: #2ac371;
+        color: #fff;
+        border-radius: 10px;
+        cursor: pointer;
+        font-size: 1.2rem;
+        font-weight: bold;
+        border-color: white;
+      }
+      button + button {
+        margin-left: 6px;
+        background: #eef3f9;
+        color: #2ac371;
+      }
+    }
+    </style>
+  </head>
+  <body>
+    <form action="#" method="post" autocomplete="on">
+      <h1>Registro de Paciente</h1>
+
+      <div class="g">
+        <label for="nombre">Nombres *</label>
+        <input id="nombre" name="nombre" type="text" required />
+      </div>
+
+      <div class="g">
+        <label for="apellido">Apellidos *</label>
+        <input id="apellido" name="apellido" type="text" required />
+      </div>
+
+      <div class="g">
+        <label for="ocupacion">Ocupación</label>
+        <input id="ocupacion" name="ocupacion" type="text" />
+      </div>
+
+      <div class="g">
+        <label for="nacimiento">Fecha de nacimiento *</label>
+        <input id="nacimiento" name="nacimiento" type="date" required />
+      </div>
+
+      <div class="g">
+        <label for="sangre">Tipo de sangre *</label>
+        <select id="sangre" name="sangre" required>
+          <option value="">Seleccione…</option>
+          <option>O-</option>
+          <option>O+</option>
+          <option>A-</option>
+          <option>A+</option>
+          <option>B-</option>
+          <option>B+</option>
+          <option>AB-</option>
+          <option>AB+</option>
+        </select>
+      </div>
+
+      <div class="g">
+        <label for="peso">Peso (kg)</label>
+        <input
+          id="peso"
+          name="peso"
+          type="number"
+          min="0"
+          step="0.1"
+          placeholder="Ej.: 68.5"
+        />
+      </div>
+
+      <div class="acciones">
+        <button type="submit">Guardar</button>
+        <button type="reset">Limpiar</button>
+      </div>
+    </form>
+  </body>
+</html>
